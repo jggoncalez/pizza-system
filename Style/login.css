@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(145deg, #fffdd0, #ffffe0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa principal */
+#countainer {
+    background: #fffdd1;
+    padding: 40px;
+    border-radius: 30px;
+    width: 360px;
+    box-shadow: 0 10px 30px rgba(255, 180, 180, 0.3);
+    border: 3px dashed #f1ec82;
+    text-align: center;
+}
+
+/* Título com vibe açucarada */
+#countainer h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #cd7f32;
+    text-shadow: 1px 1px #fff;
+}
+
+/* Labels estilos pizza cute 🍕 */
+.logtext,
+.passtext {
+    display: block;
+    font-weight: bold;
+    color: #bc8f8f;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Campos de entrada: pãezinhos recheados */
+#username,
+#pass {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ffd6d6;
+    border-radius: 20px;
+    background-color: #fffaf7;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #ff6f61;
+}
+
+#username:focus,
+#pass:focus {
+    border-color: #ffb6b9;
+    box-shadow: 0 0 8px #ffd6d6;
+    outline: none;
+}
+
+/* Botão doce de calabresa */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #bc8f8f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #f08080;
+    transform: scale(1.05);
+}
+
+/* Mensagem de erro pastel triste 😢🍓 */
+.error-msg {
+    margin-top: 10px;
+    color: #e57373;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+
+/* Detalhe extra (opcional): animação flutuante no container */
+@keyframes floaty {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+#countainer {
+    animation: floaty 4s ease-in-out infinite;
+}

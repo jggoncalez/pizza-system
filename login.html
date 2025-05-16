@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <link rel="stylesheet" href="Style/login.css">
+</head>
+<body>
+    <div id="countainer">
+        <h1> Log-In</h1>
+        <div>
+            <label class=logtext>Login:</label>
+            <input type="text" id="username">
+        </div>
+        <div>
+            <label class="passtext">Password:</label>
+            <input type="password" id="pass">
+        </div>
+        <button onclick="login()">Log-In</button>
+        <div>
+        <label class = "error-msg" id="ans"></label>
+        </div>
+    </div>
+
+    <script>
+    function login() {
+        var userName = document.getElementById("username").value;
+        var password = document.getElementById("pass").value;
+
+        if (userName === "adm" && password === "1234") {
+            window.location.href = "admsystem.html";
+        } else {
+            document.getElementById("ans").innerHTML = "Username or password is incorrect! <br> Please, try again!"
+        }
+    }
+    </script>
+</body>
+</html>
