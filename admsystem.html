@@ -1,65 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Place</title>
-    <link rel="stylesheet" href="Style/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza Place</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style/adm.css" />
 </head>
-<header style="background-color: gray;">
-    <h1>Good Old Pizza</h1>
-    <div class="menu">
-            <button onclick="show('register')">Add products</button>
-            <button onclick="show('consult')">Consult DB</button>
-            <!-- <button onclick="show('change')">Change DB data</button>
-            <button onclick="show('selldb')">Sdll</button> -->
-        </div>
-</header>
 <body>
-    <div class="container">
-        
-        <!-- Add Pizza -->
-        </div>
-        <div id="register" class="hidden">
-            <h2>Register</h2>
-            <div>
-                <label>Product: </label>
-                <input type="text" id="prodName">
-            </div>
-            <div>
-                <label>Price: </label>
-                <input type="number" id="price">
-            </div>
-            <div>
-                <label>Description: </label>
-                <input type="text" id="description">
-            </div>
-            <button onclick="registerPizza()">Register</button>
-            <label id="result"></label>
-        </div>
-
-        <!-- See DB -->
-        <div id="consult" class="hidden">
-            <h2>Product DB</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Product</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody id="productdb">
-                </tbody>
-            </table>
-        </div>
+  <header>
+    <h1>Good Old Pizza - System</h1>
+    <div class="menu">
+      <button onclick="show('register')">Add products</button>
+      <button onclick="show('consult')">Consult DB</button>
+      <!-- <button onclick="show('change')">Change DB data</button>
+      <button onclick="show('selldb')">Sell</button> -->
+      <button onclick="logout()">Log-Out</button>
     </div>
+  </header>
 
+  <div class="container">
+    <!-- Add Pizza -->
+    <div id="register" class="hidden">
+      <h2>Register</h2>
+      <div>
+        <label>Product: </label>
+        <input type="text" id="prodName" />
+      </div>
+      <div>
+        <label>Price: </label>
+        <input type="number" id="price" />
+      </div>
+      <div>
+        <label>Description: </label>
+        <input type="text" id="description" />
+      </div>
+      <button onclick="registerPizza()">Register</button>
+    </div>
+    <label id="result"></label>
 
+    <!-- See DB -->
+    <div id="consult" class="hidden">
+      <h2>Product DB</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="productdb"></tbody>
+      </table>
+    </div>
+  </div>
 
-
-    <script src="Scripts/script.js"></script>
+  <script src="Scripts/admscript.js"></script>
 </body>
-
 </html>

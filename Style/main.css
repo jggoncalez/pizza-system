@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #fffdd0, #ffffe0);
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #f1ec82;
+    padding: 20px;
+    border-bottom: 3px dashed #cd7f32;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #cd7f32;
+    font-size: 28px;
+}
+
+.headerLinks input {
+    margin: 5px;
+    padding: 10px 15px;
+    border: 2px solid #ffd6d6;
+    border-radius: 20px;
+    background-color: #fffaf7;
+    cursor: pointer;
+    color: #ff6f61;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.headerLinks input:hover {
+    background-color: #ffb6b9;
+}
+
+/* Container */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    border: 3px dashed #f1ec82;
+    background: #fffdd1;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 180, 180, 0.3);
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+}
+
+/* Ofertas */
+.offers h1 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #bc8f8f;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.row img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f1ec82;
+    color: #cd7f32;
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+    color: #bc8f8f;
+}

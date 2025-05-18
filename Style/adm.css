@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #fffdd0, #ffffe0);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #f1ec82;
+    padding: 20px;
+    border-bottom: 3px dashed #cd7f32;
+}
+
+header h1 {
+    color: #cd7f32;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu button {
+    padding: 10px 15px;
+    border: 2px solid #ffd6d6;
+    border-radius: 20px;
+    background-color: #fffaf7;
+    cursor: pointer;
+    color: #ff6f61;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #ffb6b9;
+}
+
+/* Container */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    border: 3px dashed #f1ec82;
+    background: #fffdd1;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 180, 180, 0.3);
+    flex: 1;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 2px solid #ffd6d6;
+    width: 100%;
+    max-width: 300px;
+    background-color: #fffaf7;
+    font-size: 16px;
+}
+
+/* Register button */
+#register button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #cd7f32;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#register button:hover {
+    background-color: #a56728;
+}
+
+/* Product Table */
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    background-color: #fffaf7;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #f1ec82;
+}
+
+th {
+    background-color: #f1ec82;
+    color: #cd7f32;
+}
+
+/* Hidden sections */
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+    }
+}

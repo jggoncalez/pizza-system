@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log-in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style/login.css">
 </head>
+<!-- <header>
+    <h1><a href="index.html">Good Old Pizza</a></h1>
+    <div class="headerLinks">
+        <input type="button" onclick="location.href='index.html';" value="Home" />
+        <input type="button" onclick="location.href='order.html';" value="Order Online" />
+        <input type="button" onclick="location.href='aboutUs.html';" value="About Us" />
+        <input type="button" onclick="location.href='login.html';" value="Log-in" />
+    </div>
+</header> -->
 <body>
-    <div id="countainer">
+    <div id="container">
         <h1> Log-In</h1>
         <div>
             <label class=logtext>Login:</label>
@@ -23,17 +33,6 @@
         </div>
     </div>
 
-    <script>
-    function login() {
-        var userName = document.getElementById("username").value;
-        var password = document.getElementById("pass").value;
-
-        if (userName === "adm" && password === "1234") {
-            window.location.href = "admsystem.html";
-        } else {
-            document.getElementById("ans").innerHTML = "Username or password is incorrect! <br> Please, try again!"
-        }
-    }
-    </script>
+    <script src="Scripts/login.js"></script>
 </body>
 </html>

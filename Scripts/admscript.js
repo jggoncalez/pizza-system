@@ -17,7 +17,7 @@ function registerPizza() {
     let product = (document.getElementById("prodName").value);
     let price = parseFloat(document.getElementById("price").value);
     let desc = (document.getElementById("description").value);
-    if (product == "" || price == "" || desc == "") {
+    if (product == "" || price == "" || desc == "" || price <=0) {
         document.getElementById("result").innerHTML = `Preencha todos os campos!`
     } else {
         prodMenu.push( { id, product, price, desc} );
@@ -49,4 +49,8 @@ function updateList(prodMenu) {
     });   
 }
 
+// Log-Out
+function logout() {
+    window.location.href="index.html"
+}
 
