@@ -37,16 +37,25 @@ function updateList(prodMenu) {
     if (!table) return;
 
     table.innerHTML = "";
-    prodMenu.forEach(product => {
+    prodMenu.forEach(prod => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${product.id}</td>
-            <td>${product.product}</td>
-            <td>${product.desc}</td>
-            <td>${product.price}</td>
+            <td>${prod.id}</td>
+            <td>${prod.product}</td>
+            <td>${prod.desc}</td>
+            <td>${prod.price}</td>
         `;
         table.appendChild(row);
     });   
+}
+
+// Search
+function search() {
+    const search = (document.getElementById("searchBar").value).toLowerCase()
+    const results = prodMenu.filter((prod) =>
+        prod.product.toLowerCase().includes(search, "product-db")
+    )
+    updateList(results)
 }
 
 // Log-Out

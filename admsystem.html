@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pizza Place</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Style/adm.css" />
+  <link rel="stylesheet" href="Style/adm.css"/>
 </head>
 <body>
   <header>
@@ -35,13 +35,18 @@
         <label>Description: </label>
         <input type="text" id="description" />
       </div>
-      <button onclick="registerPizza()">Register</button>
+      <div>
+        <button onclick="registerPizza()">Register</button>
+      </div>
+      <div>
+        <label id="result"></label>
+      </div>
     </div>
-    <label id="result"></label>
 
     <!-- See DB -->
     <div id="consult" class="hidden">
       <h2>Product DB</h2>
+      <input type="text" id="searchBar" placeholder="search" oninput="search()" style="max-width:800px">
       <table>
         <thead>
           <tr>
