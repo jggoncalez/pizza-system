@@ -13,8 +13,9 @@
     <div class="menu">
       <button onclick="show('register')">Add products</button>
       <button onclick="show('consult')">Consult DB</button>
-      <!-- <button onclick="show('change')">Change DB data</button>
-      <button onclick="show('selldb')">Sell</button> -->
+      <button onclick="show('edit')">Edit DB data</button>
+      <button onclick="show('salePage')">Place Orders</button>
+      <button onclick="createSalesReport()">Sales Report</button> 
       <button onclick="logout()">Log-Out</button>
     </div>
   </header>
@@ -59,8 +60,68 @@
         <tbody id="productdb"></tbody>
       </table>
     </div>
-  </div>
+  
 
+  <!-- Edit DB products -->
+   <div id="edit" class="hidden">
+    <h2>Edit DB</h2>
+    <input type="text" id="searchEdit" placeholder="search" onclick="search2Edit()">
+    <div id="changeDB" class="hidden">
+      <div class="form-group">
+        <label for="new-name">New Product Name:</label>
+        <input type="text" id="new-name" placeholder="Type here">
+      </div>
+      <div class="form-group">
+        <label for="new-desc">New Description:</label>
+        <input type="text" id="new-desc" placeholder="Type here">
+      </div>
+      <div class="form-group">
+        <label for="new-price">New Description:</label>
+        <input type="text" id="new-price" placeholder="Type here">
+      </div>
+      <button onclick="editDB()">Save</button>
+    </div>
+   </div>
+
+   <!-- Order -->
+
+    <div id="salePage" class="hidden">
+      <h2>Order Online</h2>
+      <div class="form-group">
+          <label for="order-product">Product:</label>
+          <input type="text" id="order-product" placeholder="type here">
+      </div>
+      <div class="form-group">
+          <label for="order-price">Price:</label>
+          <input type="text" id="order-price" placeholder="type here">
+       </div>
+       <div class="form-group">
+          <label for="order-buyer">Buyer:</label>
+          <input type="text" id="order-buyer" placeholder="type here">
+       </div>
+          <button onclick="registerOrder()">Send Order</button>
+          <h3>Your orders</h3>
+          <ul id="order-list">
+          </ul>
+    </div>
+
+   <!--Sales Report-->
+   <div id="report" class="hidden">
+    <h3>Sales</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Buyer</th>
+        </tr>
+      </thead>
+      <tbody id="report-table">
+        <!-- report stuff here -->
+      </tbody>
+    </table>
+   </div>
+  </div>
   <script src="Scripts/admscript.js"></script>
 </body>
 </html>

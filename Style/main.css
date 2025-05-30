@@ -26,6 +26,10 @@ header h1 a {
     font-size: 28px;
 }
 
+html {
+  scroll-behavior: smooth;
+ }
+
 .headerLinks input {
     margin: 5px;
     padding: 10px 15px;
@@ -43,7 +47,7 @@ header h1 a {
 }
 
 /* Container */
-.container {
+.container, .container-2 {
     margin: 20px auto;
     padding: 20px;
     width: 90%;

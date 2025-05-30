@@ -3,6 +3,7 @@ function login() {
     var password = document.getElementById("pass").value;
 
     if (userName === "adm" && password === "1234") {
+        auth = true;
         setTimeout(() => {
             window.location.href = "admsystem.html";
         }, 1000);
