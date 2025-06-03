@@ -16,7 +16,6 @@ The project is organized into the following directories:
 
 - `index.html`: Landing page for users.
 - `login.html`: User authentication interface.
-- `order.html`: Page for placing pizza orders.
 - `admsystem.html`: Administrative dashboard for managing the system.
 - `aboutus.html`: Information about the pizza service.
 - `Scripts/`: Contains JavaScript files for interactive functionalities.
