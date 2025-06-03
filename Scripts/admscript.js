@@ -21,10 +21,10 @@ function registerPizza() {
     let price = parseFloat(document.getElementById("price").value);
     let desc = (document.getElementById("description").value);
     if (product == "" || price == "" || desc == "" || price <=0) {
-        document.getElementById("result").innerHTML = `Preencha todos os campos!`
+        document.getElementById("result").innerHTML = `Please fill in all fields correctly before registering the product.`
     } else {
         prodMenu.push( { id, product, price, desc} );
-        document.getElementById("result").innerHTML = `Produto ${product} foi cadastrado com sucesso!`
+        document.getElementById("result").innerHTML = `Product "${product}" has been successfully registered!`
         console.log(prodMenu)
         updateList(prodMenu, "productdb")
 
@@ -62,28 +62,31 @@ function search() {
 }
 
 // Edit
-function edit(){
+function editDB(){
     if (dbChanges) {
-        const newProd = document.getElementById("new-name").value;
-        const newDesc = document.getElementById("new-desc").value;
+        const newProd = document.getElementById("new-name").value.trim();
+        const newDesc = document.getElementById("new-desc").value.trim();
         const newPrice = parseFloat(document.getElementById("new-price").value);
 
-        if (newProd && newDesc && !isNaN(newPrice)) {
+        if (newProd && newDesc && !isNaN(newPrice) && newPrice > 0) {
             dbChanges.product = newProd;
             dbChanges.desc = newDesc;
             dbChanges.price = newPrice;
 
             updateList(prodMenu);
-            alert("Produto editado com sucesso!");
+            alert("Product successfully edited!");
             document.getElementById("changeDB").classList.add("hidden");
+            dbChanges = null;
         } else {
-            alert("All fields are required!")
+            alert("All fields are required and price must be greater than 0!");
         }
+    } else {
+        alert("No product selected for editing!");
     }
 }
 
 function search2Edit(){
-    const search = document.getElementById("searchEdit").value.toLowerCase();
+    const search = document.getElementById("searchEdit").value.toLowerCase().trim();
     const results = prodMenu.filter((prod) =>
         prod.product.toLowerCase().includes(search));
 
@@ -95,6 +98,7 @@ function search2Edit(){
         document.getElementById("new-desc").value = prod.desc;
         document.getElementById("new-price").value = prod.price;
     } else {
+        alert("No matching product found!");
         document.getElementById("changeDB").classList.add("hidden");
         dbChanges = null;
     }
@@ -156,7 +160,7 @@ function createSalesReport(){
     `;
     tableReport.appendChild(totalSalesRow);
 
-    document.show('report');
+    show('report');
 }
 
 // Log-Out
