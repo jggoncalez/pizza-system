@@ -74,14 +74,14 @@ function editDB(){
             dbChanges.price = newPrice;
 
             updateList(prodMenu);
-            alert("Product successfully edited!");
+            document.getElementById("message").innerHTML = "Product successfully edited!";
             document.getElementById("changeDB").classList.add("hidden");
             dbChanges = null;
         } else {
-            alert("All fields are required and price must be greater than 0!");
+            document.getElementById("message").innerHTML = "All fields are required and price must be greater than 0!";
         }
     } else {
-        alert("No product selected for editing!");
+        document.getElementById("message").innerHTML = "No product selected for editing!";
     }
 }
 
@@ -98,7 +98,6 @@ function search2Edit(){
         document.getElementById("new-desc").value = prod.desc;
         document.getElementById("new-price").value = prod.price;
     } else {
-        alert("No matching product found!");
         document.getElementById("changeDB").classList.add("hidden");
         dbChanges = null;
     }

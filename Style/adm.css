@@ -13,19 +13,22 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Header */
 header {
-    background-color: #f1ec82;
+    background-color: #ffde7d;
     padding: 20px;
-    border-bottom: 3px dashed #cd7f32;
+    border-bottom: 5px dotted #ff6f61;
+    animation: bounceIn 1s ease;
 }
 
 header h1 {
     color: #cd7f32;
     font-size: 28px;
     margin-bottom: 10px;
+    text-shadow: 2px 2px #ffd6d6;
 }
 
 .menu {
@@ -44,11 +47,13 @@ header h1 {
     color: #ff6f61;
     font-weight: bold;
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, transform 0.2s ease;
 }
 
 .menu button:hover {
     background-color: #ffb6b9;
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
 }
 
 /* Container */
@@ -62,6 +67,7 @@ header h1 {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(255, 180, 180, 0.3);
     flex: 1;
+    animation: slideIn 1s ease;
 }
 
 /* Inputs */
@@ -75,6 +81,14 @@ input[type="number"] {
     max-width: 300px;
     background-color: #fffaf7;
     font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    outline: none;
+    animation: shake 0.5s ease;
 }
 
 /* Register button */
@@ -87,11 +101,49 @@ input[type="number"] {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #register button:hover {
     background-color: #a56728;
+    transform: translateY(-3px) rotate(-5deg);
+    box-shadow: 0 5px 15px rgba(205, 127, 50, 0.3);
+}
+/* Edit button */
+#edit button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #cd7f32;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#edit button:hover {
+    background-color: #a56728;
+    transform: translateY(-3px) rotate(-5deg);
+    box-shadow: 0 5px 15px rgba(205, 127, 50, 0.3);
+}
+/* Order button */
+#salePage button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #cd7f32;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#salePage button:hover {
+    background-color: #a56728;
+    transform: translateY(-3px) rotate(-5deg);
+    box-shadow: 0 5px 15px rgba(205, 127, 50, 0.3);
 }
 
 /* Product Table */
@@ -102,6 +154,7 @@ table {
     background-color: #fffaf7;
     border-radius: 10px;
     overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 th, td {
@@ -112,6 +165,7 @@ th, td {
 th {
     background-color: #f1ec82;
     color: #cd7f32;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Hidden sections */
@@ -129,5 +183,71 @@ th {
     input[type="text"],
     input[type="number"] {
         width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
     }
 }
