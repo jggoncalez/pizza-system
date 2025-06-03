@@ -1,5 +1,7 @@
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +33,7 @@ header h1 {
     text-shadow: 2px 2px #ffd6d6;
 }
 
+/* Menu */
 .menu {
     display: flex;
     justify-content: center;
@@ -91,43 +94,9 @@ input[type="number"]:focus {
     animation: shake 0.5s ease;
 }
 
-/* Register button */
-#register button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #cd7f32;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#register button:hover {
-    background-color: #a56728;
-    transform: translateY(-3px) rotate(-5deg);
-    box-shadow: 0 5px 15px rgba(205, 127, 50, 0.3);
-}
-/* Edit button */
-#edit button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #cd7f32;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#edit button:hover {
-    background-color: #a56728;
-    transform: translateY(-3px) rotate(-5deg);
-    box-shadow: 0 5px 15px rgba(205, 127, 50, 0.3);
-}
-/* Order button */
+/* Buttons */
+#register button,
+#edit button,
 #salePage button {
     margin-top: 10px;
     padding: 10px 20px;
@@ -140,6 +109,8 @@ input[type="number"]:focus {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
+#register button:hover,
+#edit button:hover,
 #salePage button:hover {
     background-color: #a56728;
     transform: translateY(-3px) rotate(-5deg);
@@ -168,12 +139,12 @@ th {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Hidden sections */
+/* Hidden Sections */
 .hidden {
     display: none;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 600px) {
     .menu {
         flex-direction: column;
