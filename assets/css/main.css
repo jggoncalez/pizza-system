@@ -1,10 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+@font-face {
+    font-family: 'fredoka';
+    src: url('../fonts/fredoka.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'fredoka';
+    src: url('../fonts/fredoka.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'fredoka', sans-serif;
 }
 
 body {
@@ -25,6 +41,7 @@ header h1 a {
     color: #cd7f32;
     font-size: 32px;
     text-shadow: 2px 2px #ffd6d6;
+    font-weight: 700;
     transition: color 0.3s ease;
 }
 
