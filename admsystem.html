@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pizza Place</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Style/adm.css"/>
+      <link rel="preload" href="assets/css/adm.css?v=1.0" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/adm.css?v=1.0"></noscript>
 </head>
 <body>
   <header>
     <h1>Good Old Pizza - System</h1>
-    <div class="menu">
+    <nav class="menu">
       <button onclick="show('register')">Add products</button>
       <button onclick="show('consult')">Consult DB</button>
       <button onclick="show('edit')">Edit DB data</button>
       <button onclick="show('salePage')">Place Orders</button>
       <button onclick="createSalesReport()">Sales Report</button> 
       <button onclick="logout()">Log-Out</button>
-    </div>
+    </nav>
   </header>
 
   <div class="container">
@@ -126,6 +126,6 @@
     </table>
    </div>
   </div>
-  <script src="Scripts/admscript.js"></script>
+  <script src="assets/js/admscript.js?v=1.0" defer></script>
 </body>
 </html>
