@@ -1,3 +1,6 @@
+/* ====================== */
+/* FONTS */
+/* ====================== */
 @font-face {
     font-family: 'fredoka';
     src: url('../fonts/fredoka.woff2') format('woff2');
@@ -15,7 +18,9 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-
+/* ====================== */
+/* RESET */
+/* ====================== */
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +33,9 @@ body {
     text-align: center;
 }
 
-/* Header */
+/* ====================== */
+/* HEADER */
+/* ====================== */
 header {
     background-color: #ffde7d;
     padding: 20px;
@@ -70,7 +77,9 @@ html {
     transform: scale(1.1);
 }
 
-/* Container */
+/* ====================== */
+/* CONTAINERS (main.css) */
+/* ====================== */
 .container, .container-2 {
     margin: 20px auto;
     padding: 20px;
@@ -87,7 +96,9 @@ html {
     transform: translateY(-10px);
 }
 
-/* Banner */
+/* ====================== */
+/* BANNER (main.css) */
+/* ====================== */
 .banner img {
     width: 100%;
     border-radius: 15px;
@@ -99,7 +110,9 @@ html {
     transform: rotate(3deg) scale(1.05);
 }
 
-/* Ofertas */
+/* ====================== */
+/* OFFERS (main.css) */
+/* ====================== */
 .offers h1 {
     font-size: 26px;
     margin: 15px 0;
@@ -134,7 +147,9 @@ html {
     box-shadow: 0 8px 16px rgba(255, 111, 97, 0.5);
 }
 
-/* Footer */
+/* ====================== */
+/* FOOTER (main.css) */
+/* ====================== */
 footer {
     margin-top: 20px;
     padding: 15px;
@@ -153,4 +168,111 @@ footer a {
 
 footer a:hover {
     color: #ff6f61;
+}
+
+/* ====================== */
+/* MODAL (main.css base) */
+/* ====================== */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none; /* start hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fffdd1; /* do login */
+  padding: 40px;
+  border-radius: 30px;
+  min-width: 360px;
+  max-width: 90%;
+  border: 3px dashed #f1ec82;
+  box-shadow: 0 10px 30px rgba(255, 180, 180, 0.3);
+  position: relative;
+  text-align: center;
+  animation: floaty 4s ease-in-out infinite;
+}
+
+/* ====================== */
+/* CLOSE BUTTON (main.css) */
+/* ====================== */
+.close {
+  position: absolute;
+  top: 5px; right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #cd7f32;
+  font-weight: bold;
+}
+
+/* ====================== */
+/* LOGIN FORM */
+/* ====================== */
+
+.modal-content h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #cd7f32;
+    text-shadow: 1px 1px #fff;
+}
+
+.logtext,
+.passtext {
+    display: block;
+    font-weight: bold;
+    color: #bc8f8f;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+#username,
+#pass {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ffd6d6;
+    border-radius: 20px;
+    background-color: #fffaf7;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #ff6f61;
+}
+
+#username:focus,
+#pass:focus {
+    border-color: #ffb6b9;
+    box-shadow: 0 0 8px #ffd6d6;
+    outline: none;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #bc8f8f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #f08080;
+    transform: scale(1.05);
+}
+
+/* ====================== */
+/* ANIMATIONS */
+/* ====================== */
+@keyframes floaty {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
 }
