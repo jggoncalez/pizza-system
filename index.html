@@ -13,7 +13,7 @@
         <input type="button" onclick="location.href='index.html';" value="Home" />
         <input type="button" onclick="location.href='#about-us';" value="About Us" />
         <input type="button" onclick="location.href='#contact';" value="Contact Us" />
-        <input type="button" onclick="location.href='login.html';" value="Log-in" />
+        <input type="button" onclick="loginModal()" value="Log-in" />
     </nav>
 </header>
 
@@ -33,6 +33,26 @@
         </div>
     </div>
 
+    <div id="login-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="close-modal" class="close" onclick="closeModal()">X</span>
+            <h1> Log-In</h1> 
+            <div>
+                <label class=logtext>Login:</label>
+                <input type="text" id="username">
+            </div>
+            <div>
+                <label class="passtext">Password:</label>
+                <input type="password" id="pass">
+            </div>
+            <button onclick="login()">Log-In</button>
+            <div>
+            <label class = "error-msg" id="ans"></label>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container" id="about-us">
         <h1>About Us</h1>
         <p>Welcome to Good Old Pizza, where tradition meets flavor! Our story began in 1985, in a small corner of the city, with a passion for crafting the perfect pizza. Inspired by the classic recipes of the past, we set out to create a place where families and friends could gather to enjoy delicious, handmade pizzas in a cozy, retro atmosphere.</p>
@@ -50,6 +70,7 @@
             Los Angeles, CA 90064</p>
 
     </div>
+<script src="assets/js/mainpage.js"></script>
 </body>
 
 <footer>
